@@ -1,6 +1,6 @@
-const books = require("../books")
-const res = require("express/lib/request")
-const req = require("express/lib/response")
+const books = require("../books");
+const res = require("express/lib/request");
+const req = require("express/lib/response");
 //get all books
 const getBooks = (req, res)=>{
     res.status(200).json(books)
@@ -19,9 +19,9 @@ const getBooks = (req, res)=>{
 }*/
 
 const deleteBook =(req, res)=>{
-    res.json(books.filter((book)=>book.title!==req.params.title))
+    res.json(books.filter((book)=>book.title!=req.params.title))
 }
 
 
 
-module.exports={getBooks, deleteBook}
+module.exports={getBooks, deleteBook,}
